@@ -5,11 +5,9 @@
 	<title>Simpy Chocolate</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/css/intlTelInput.css?_v=20240706162130" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20240706162130" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/css/intlTelInput.css?_v=20240706231744" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240706231744" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -110,7 +108,7 @@
 						<p class="form__title">Email</p>
 						<input class="form__input input" type="email" autocomplete="email" placeholder="Enter your email" />
 						<p class="form__title">Phone number</p>
-						<input class="form__input input" id="phone" type="text" placeholder="Phone number" />
+						<input class="form__input input phone" type="text" placeholder="Phone number" />
 						<p class="form__title">Card number</p>
 						<input class="form__input input" type="text" placeholder="Enter card" />
 						<p class="form__title">Comment</p>
@@ -120,6 +118,78 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="popup2" aria-hidden="true" class="popup popup2">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<clipPath id="clip18_3629">
+									<rect id="x-close" width="28.000000" height="28.000000" fill="white" fill-opacity="0" />
+								</clipPath>
+							</defs>
+							<rect id="x-close" width="28.000000" height="28.000000" fill="#FFFFFF" fill-opacity="0" />
+							<g clip-path="url(#clip18_3629)">
+								<path id="Icon" d="M21 7L7 21" stroke="#111111" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
+								<path id="Icon" d="M7 7L21 21" stroke="#111111" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
+							</g>
+						</svg>
+					</button>
+					<h2 class="popup__title popup2__title title">
+						LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span>
+					</h2>
+					<form class="form" action="#">
+						<div class="form__name">
+							<input class="form__input input" type="text" placeholder="Name" />
+							<input class="form__input input" type="text" placeholder="Surname" />
+						</div>
+
+						<input class="form__input input" type="email" autocomplete="email" placeholder="Enter your email" />
+						<div class="form__input input">
+							<input id="phone" type="text" placeholder="Phone number" />
+						</div>
+						<textarea class="form__textarea textarea input" placeholder="Enter text" name="comment" id="comment"></textarea>
+						<button class="form__btn btn">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup3" aria-hidden="true" class="popup popup3">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<clipPath id="clip18_3629">
+									<rect id="x-close" width="28.000000" height="28.000000" fill="white" fill-opacity="0" />
+								</clipPath>
+							</defs>
+							<rect id="x-close" width="28.000000" height="28.000000" fill="#FFFFFF" fill-opacity="0" />
+							<g clip-path="url(#clip18_3629)">
+								<path id="Icon" d="M21 7L7 21" stroke="#111111" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
+								<path id="Icon" d="M7 7L21 21" stroke="#111111" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round" />
+							</g>
+						</svg>
+					</button>
+					<div class="popup3__bg">
+						<img src="img/content/Subcribe-bg.webp" alt="Image" />
+					</div>
+					<div class="popup3__wrap">
+						<h2 class="popup__title popup3__title title">
+							Explore our <br />
+							<span>new chocolate</span> first!
+						</h2>
+						<form class="form" action="#">
+							<input class="form__input input popup3__input" type="email" autocomplete="email" placeholder="Enter your email" />
+							<button class="form__btn btn btn__subscribe">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<main class="page">
 			<div class="page__hero hero">
@@ -134,7 +204,7 @@
 						</h1>
 						<div class="hero__action">
 							<div class="hero__action-btn action-btn">
-								<button data-popup="#popup" class="action-btn__btn btn" type="submit" class="button">
+								<button data-popup=".popup" class="action-btn__btn btn" type="submit" class="button">
 									Buy now
 								</button>
 								<a data-goto="#how" href="#" class="action-btn__btn btn btn--border">How it’s made</a>
@@ -480,7 +550,7 @@
 								discovered by the Native American tribe called the
 								Mayans.
 							</p>
-							<button data-popup="#popup" type="button" class="top__btn btn">
+							<button data-popup=".popup" type="button" class="top__btn btn">
 								Buy now
 							</button>
 						</div>
@@ -569,7 +639,7 @@
 						<!-- Якщо потрібна пагінація -->
 						<div class="swiper-pagination"></div>
 					</div>
-					<a class="loved__button btn btn--border">Leave a review</a>
+					<a class="loved__button btn btn--border" data-popup="#popup2">Leave a review</a>
 				</div>
 			</div>
 			<div class="page__subscibe subscibe">
@@ -584,7 +654,9 @@
 						handcrafted with the utmost care, each piece is a work of
 						art that is sure to please.
 					</p>
-					<button class="subscibe__btn btn">Subscibe</button>
+					<button class="subscibe__btn btn" data-popup="#popup3">
+						Subscibe
+					</button>
 				</div>
 			</div>
 		</main>
@@ -635,8 +707,8 @@
 		</footer>
 
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/js/intlTelInput.min.js?_v=20240706162130"></script>
-	<script src="js/app.min.js?_v=20240706162130"></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.1.0/build/js/intlTelInput.min.js?_v=20240706231744"></script>
+	<script src="js/app.min.js?_v=20240706231744"></script>
 
 </body>
 
